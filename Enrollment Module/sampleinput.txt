@@ -1,0 +1,105 @@
+student
+>
+/enrolment
+/enrolment/getdata
+/enrolment/savedata =>
+{
+    "courses":[
+    "18SPC801"
+    ]
+}
+
+
+Admin
+>
+/enrolment
+/enrolment/modifystatus =>
+{   
+    "sem":8,
+    "batch":2023,
+    "status":"Active",
+    "start":"2023-01-31",
+    "end":"2023-02-03"
+}
+
+/enrolment/approve =>
+{
+    "courses":[
+        {
+            "courseCode":"18SPC801",
+            "students":[
+                {
+                    "register":"1917130",
+                    "approval":3
+                },
+                {
+                    "register":"1917145",
+                    "approval":3
+                }
+            ]
+        }
+    ]
+}
+
+
+/enrolment/addstudents =>
+{
+    "courses":[
+        {
+            "courseCode":"18SPC802",
+            "students":[
+                {
+                    "register":"1917130"
+                },
+                {
+                    "register":"1917145"
+                }
+            ]
+        }
+    ]
+}
+
+/enrolment/removestudents => 
+{
+    "courses":[
+        {
+            "courseCode":"18SPC801",
+            "students":[
+                {
+                    "register":"1917130"
+                }
+            ]
+        }
+    ]
+}
+
+
+/fa/enrolment/
+/pc/enrolment/
+/hod/enrolment/ =>
+{   
+    "batch" :2023,
+    "sem" : 8,
+    "branch":"CSE"
+}
+
+
+
+/enrolment/approve =>
+{
+    "courses":[
+        {
+            "courseCode":"18SPC801",
+            "students":[
+                {
+                    "register":"1917130",
+                    "approval":3
+                },
+                {
+                    "register":"1917145",
+                    "approval":3
+                }
+            ]
+        }
+    ]
+}
