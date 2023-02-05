@@ -210,18 +210,21 @@ export const approvestudents = async(req, res) => {
                     continue
                 }
 
-                enrollmentdata.approval = student.approval
+                
                 
                 if(student.approval == -3){
                     enrollmentdata.enrolled = false
                 }
 
                 if(student.approval == 3){
-                   enrollmentdata.enrolled = true
+                    enrollmentdata.enrolled = true
+                    enrollmentdata.approval = 0
                 }
                 else{
                     enrollmentdata.enrolled = false
                 }
+                
+                
                 const result = await enrollmentdata.save()
                 
                 if(!result){
