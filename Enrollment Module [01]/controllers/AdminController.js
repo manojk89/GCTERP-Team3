@@ -226,7 +226,7 @@ export const approvestudents = async(req, res) => {
                 }
                 
                 if(student.approval == 4){
-                    enrollmentdata.approval = 10
+                    enrollmentdata.approval = 4
                     enrollmentdata.enrolled = true
                 }else{
                     enrollmentdata.enrolled = false
