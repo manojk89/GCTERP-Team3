@@ -30,11 +30,11 @@ Admin
             "students":[
                 {
                     "register":"1917130",
-                    "approval":3
+                    "approval":4
                 },
                 {
                     "register":"1917145",
-                    "approval":3
+                    "approval":4
                 }
             ]
         }
