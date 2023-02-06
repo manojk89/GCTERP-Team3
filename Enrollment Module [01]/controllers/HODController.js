@@ -161,6 +161,7 @@ export const approvestudents = async(req, res) => {
                 }
                 
                 enrollmentdata.approval = student.approval
+                enrollmentdata.enrolled = true
                 
                 const result = await enrollmentdata.save()
                 
