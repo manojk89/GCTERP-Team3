@@ -41,9 +41,10 @@ import { StudentsModel } from '../models/StudentsModel.js'
 export const getenrolledstudentslist = async(req, res) => {
     try{
         // replace this later based on user
-        const  batch = 2023 
-        const sem = 8
-        const branch = "CSE"
+//           const  batch = 2023 
+//         const sem = 8
+//         const branch = "CSE"
+        const {batch,branch,sem} = req.body
         
         const enrollmentstatus = await SemesterMetadataModel.findOne({semester:{sem:sem,batch:batch}})
       
