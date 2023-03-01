@@ -1,0 +1,77 @@
+import express from "express"
+
+import { checkforenrolment, checkforregistration, getenrolmentdata, getregisterdata, saveCourseRegisteration, saveenrolmentdata } from "../controllers/StudentController.js"
+
+const router = express.Router()
+
+///////////////////////  ADMIN MODULE ///////////////////////
+
+
+
+///////////////////////  USERS MODULE ///////////////////////
+
+
+
+///////////////////////  STUDENTS MODULE ///////////////////////
+
+
+
+///////////////////////  FACULTY MODULE ///////////////////////
+
+
+
+/////////////////////// CURRICULUM MODULE ///////////////////////
+
+
+
+/////////////////////// TIMETABLE MODULE ///////////////////////
+
+
+
+/////////////////////// ATTENDANCE MODULE ///////////////////////
+
+
+
+/////////////////////// HALLTICKET MODULE ///////////////////////
+
+
+
+/////////////////////// ENROLLMENT MODULE ///////////////////////
+router.route("/enrolment").get(checkforenrolment);
+router.route("/enrolment/getdata").get(getenrolmentdata);
+router.route("/enrolment/savedata").post(saveenrolmentdata);
+
+
+
+
+/////////////////////// RESULT MODULE ///////////////////////
+
+
+
+/////////////////////// REGISTRATION MODULE ///////////////////////
+router.route("/courseregistration").get(checkforregistration)
+router.route("/courseregistration/getdata").get(getregisterdata)
+router.route("/courseregistration/savedata").post(saveCourseRegisteration)
+
+
+/////////////////////// EXAM FEE MODULE ///////////////////////
+
+
+
+/////////////////////// EXAMINERS PANEL MODULE ///////////////////////
+
+
+
+/////////////////////// COURSE ATTAINMENT MODULE ///////////////////////
+
+
+
+/////////////////////// INTERNALS MODULE ///////////////////////
+
+
+
+/////////////////////// FEEDBACK MODULE ///////////////////////
+
+
+
+export default router
